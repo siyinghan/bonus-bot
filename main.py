@@ -56,6 +56,8 @@ def get_daily_bonus():
             logging.info(f"{i + 1} click to get the daily bonus from Baidu Baike")
             sleep(4)
 
+    logging.info("Done!")
+
 
 def activate_chrome_driver():
     """
