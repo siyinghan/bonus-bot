@@ -28,28 +28,28 @@ def get_daily_bonus():
     """
     with activate_chrome_driver() as driver:
         driver.get(hifini_url)
-        logging.info(f"Chrome driver open HiFiNi: {hifini_url}")
+        logging.info(f"Open HiFiNi: {hifini_url}")
         driver.find_element(by=By.XPATH, value='//*[@id="sign"]').click()
         logging.info("Click to get the daily bonus from HiFiNi")
         sleep(3)
 
     with activate_chrome_driver() as driver:
         driver.get(hai_tang_url)
-        logging.info(f"Chrome driver open HaiTang: {hai_tang_url}")
+        logging.info(f"Open HaiTang: {hai_tang_url}")
         driver.find_element(by=By.XPATH, value='//*[@id="mypages"]/center/a[1]').click()
         logging.info("Click to get the daily bonus from HaiTang")
         sleep(3)
 
     with activate_chrome_driver() as driver:
         driver.get(baidu_tb_url)
-        logging.info(f"Chrome driver open Baidu Tieba: {baidu_tb_url}")
+        logging.info(f"Open Baidu Tieba: {baidu_tb_url}")
         driver.find_element(by=By.XPATH, value='//*[@id="signstar_wrapper"]/a/span[1]').click()
         logging.info("Click to get the daily bonus from Baidu Tieba")
         sleep(3)
 
     with activate_chrome_driver() as driver:
         driver.get(baidu_baike_url)
-        logging.info(f"Chrome driver open Baidu Baike: {baidu_baike_url}")
+        logging.info(f"Open Baidu Baike: {baidu_baike_url}")
 
         for i in range(3):
             driver.find_element(by=By.XPATH, value='//*[@id="starFlower"]/div/em').click()
