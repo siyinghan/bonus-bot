@@ -1,5 +1,5 @@
 """
-Open pages and check in.
+Open pages and get the daily bonus.
 """
 import logging
 import sys
