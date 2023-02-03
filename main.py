@@ -32,21 +32,21 @@ def get_daily_bonus():
         logging.info(f"Open HiFiNi: {hifini_url}")
         driver.find_element(by=By.XPATH, value='//*[@id="sign"]').click()
         logging.info("Click to get the daily bonus from HiFiNi")
-        sleep(3)
+        sleep(2)
 
     with activate_chrome_driver() as driver:
         driver.get(hai_tang_url)
         logging.info(f"Open HaiTang: {hai_tang_url}")
         driver.find_element(by=By.XPATH, value='//*[@id="mypages"]/center/a[1]').click()
         logging.info("Click to get the daily bonus from HaiTang")
-        sleep(3)
+        sleep(2)
 
     with activate_chrome_driver() as driver:
         driver.get(baidu_tb_url)
         logging.info(f"Open Baidu Tieba: {baidu_tb_url}")
         driver.find_element(by=By.XPATH, value='//*[@id="signstar_wrapper"]/a/span[1]').click()
         logging.info("Click to get the daily bonus from Baidu Tieba")
-        sleep(3)
+        sleep(2)
 
     with activate_chrome_driver() as driver:
         driver.get(baidu_baike_url)
@@ -55,16 +55,17 @@ def get_daily_bonus():
         for i in range(3):
             driver.find_element(by=By.XPATH, value='//*[@id="starFlower"]/div/em').click()
             logging.info(f"{i + 1} click to get the daily bonus from Baidu Baike")
-            sleep(4)
+            sleep(2)
 
     with activate_chrome_driver() as driver:
         driver.get(chaohua_url)
         logging.info(f"Open Weibo Chaohua: {chaohua_url}")
+        sleep(4)
         driver.find_element(
             by=By.XPATH,
             value='//*[@id="Pl_Core_StuffHeader__1"]/div/div[2]/div/div[3]/div/div[3]/a').click()
         logging.info("Click to get the daily bonus from Weibo Chaohua")
-        sleep(3)
+        sleep(2)
 
     logging.info("Done!")
 
