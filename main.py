@@ -14,6 +14,7 @@ hifini_url = "https://www.hifini.com"
 hai_tang_url = "https://www.lvhtebook.com/?act=signinlst"
 baidu_tb_url = "https://tieba.baidu.com/f?kw=%B9%A8%BF%A1"
 baidu_baike_url = "https://baike.baidu.com/item/%E9%BE%9A%E4%BF%8A/19919509"
+chaohua_url = "https://weibo.com/p/100808b503e94e4f2f272c6e1cf79b59c41085"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -55,6 +56,15 @@ def get_daily_bonus():
             driver.find_element(by=By.XPATH, value='//*[@id="starFlower"]/div/em').click()
             logging.info(f"{i + 1} click to get the daily bonus from Baidu Baike")
             sleep(4)
+
+    with activate_chrome_driver() as driver:
+        driver.get(chaohua_url)
+        logging.info(f"Open Weibo Chaohua: {chaohua_url}")
+        driver.find_element(
+            by=By.XPATH,
+            value='//*[@id="Pl_Core_StuffHeader__1"]/div/div[2]/div/div[3]/div/div[3]/a').click()
+        logging.info("Click to get the daily bonus from Weibo Chaohua")
+        sleep(3)
 
     logging.info("Done!")
 
