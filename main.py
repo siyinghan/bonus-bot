@@ -44,6 +44,7 @@ def get_daily_bonus():
     with activate_chrome_driver() as driver:
         driver.get(baidu_tb_url)
         logging.info(f"Open Baidu Tieba: {baidu_tb_url}")
+        sleep(4)
         driver.find_element(by=By.XPATH, value='//*[@id="signstar_wrapper"]/a/span[1]').click()
         logging.info("Click to get the daily bonus from Baidu Tieba")
         sleep(2)
@@ -51,6 +52,7 @@ def get_daily_bonus():
     with activate_chrome_driver() as driver:
         driver.get(baidu_baike_url)
         logging.info(f"Open Baidu Baike: {baidu_baike_url}")
+        sleep(4)
 
         for i in range(3):
             driver.find_element(by=By.XPATH, value='//*[@id="starFlower"]/div/em').click()
