@@ -68,8 +68,6 @@ def get_daily_bonus():
         # click twice to make sure of getting the bonus
         xpath = '//*[@id="Pl_Core_StuffHeader__1"]/div/div[2]/div/div[3]/div/div[3]/a'
         driver.find_element(by=By.XPATH, value=xpath).click()
-        sleep(1)
-        driver.find_element(by=By.XPATH, value=xpath).click()
         logging.info("Click to get the daily bonus from Weibo Chaohua")
         sleep(2)
 
