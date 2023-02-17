@@ -2,7 +2,7 @@
 
 ### 0.0.2 (2023-02-01)
 
-- Add auto-open for Weibo Chaohua.
+- Organize into separate files for improved clarity and modularity.
 
 ### 0.0.1 (2023-02-01)
 
