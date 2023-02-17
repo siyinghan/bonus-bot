@@ -1,3 +1,6 @@
+"""
+Get the daily bonus.
+"""
 from get_daily_bonus import get_daily_bonus
 
 if __name__ == "__main__":
