@@ -1,8 +1,8 @@
-# daily-bonus-auto
+# bonus-bot
 
 Automatically open pages to receive the daily bonus.
 
 ```zsh
-$ cd ~/Documents/GitHub/daily-bonus-auto
+$ cd ~/Documents/GitHub/bonus-bot
 $ python main.py
 ```
