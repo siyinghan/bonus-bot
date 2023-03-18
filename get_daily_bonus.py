@@ -34,6 +34,7 @@ def get_hai_tang():
     with activate_chrome_driver("Default") as driver:
         driver.get(hai_tang_url)
         logging.info(f"Open HaiTang: {hai_tang_url}")
+        sleep(1)
         driver.find_element(by=By.XPATH, value='//*[@id="mypages"]/center/a[1]').click()
         logging.info("Click to get the daily bonus from HaiTang")
         sleep(2)
