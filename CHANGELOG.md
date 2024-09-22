@@ -3,6 +3,12 @@
 All notable changes to the bonus-bot project will be documented in this file. The format is based
 on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.0.4] - 2024-09-22
+
+### Fixed
+
+- Fixed Baidu Baike element not found issue.
+
 ## [0.0.3] - 2023-03-05
 
 ### Fixed

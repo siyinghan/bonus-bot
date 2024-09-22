@@ -65,6 +65,7 @@ def get_baidu_baike():
         logging.info(f"Open Baidu Baike: {baidu_baike_url}")
         sleep(4)
         for i in range(3):
-            driver.find_element(by=By.XPATH, value='//*[@id="starFlower"]/div/em').click()
+            driver.find_element(by=By.XPATH,
+                                value='//*[@id="J-lemma-main-wrapper"]/div[1]/div/div/div/div[2]/div[4]/div[1]/div[1]/div[1]').click()
             logging.info(f"{i + 1} click to get the daily bonus from Baidu Baike")
             sleep(3)
