@@ -3,6 +3,12 @@
 All notable changes to the bonus-bot project will be documented in this file. The format is based
 on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.0.5] - 2025-01-31
+
+### Changed
+
+- Added OurBits.
+
 ## [0.0.4] - 2024-09-22
 
 ### Fixed

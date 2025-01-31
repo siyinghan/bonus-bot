@@ -11,6 +11,7 @@ from util import logging, activate_chrome_driver
 
 hifini_url = "https://www.hifini.com"
 hai_tang_url = "https://www.lvhtebook.com/?act=signinlst"
+ourbits_url = "https://ourbits.club/attendance.php"
 baidu_tb_url = "https://tieba.baidu.com/f?kw=%B9%A8%BF%A1"
 baidu_baike_url = "https://baike.baidu.com/item/%E9%BE%9A%E4%BF%8A/19919509"
 
@@ -37,6 +38,18 @@ def get_hai_tang():
         sleep(1)
         driver.find_element(by=By.XPATH, value='//*[@id="mypages"]/center/a[1]').click()
         logging.info("Click to get the daily bonus from HaiTang")
+        sleep(2)
+
+
+def get_ourbits():
+    """
+    Automates the process of logging in to the OurBits website and obtaining the daily bonus.
+    """
+    with activate_chrome_driver("Default") as driver:
+        driver.get(hai_tang_url)
+        logging.info(f"Open OurBits: {ourbits_url}")
+        sleep(1)
+        logging.info("Click to get the daily bonus from OurBits")
         sleep(2)
 
 
