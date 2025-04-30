@@ -11,7 +11,7 @@ from util import logging, activate_chrome_driver
 
 hifini_url = "https://www.hifini.com"
 hai_tang_url = "https://www.lvhtebook.com/?act=signinlst"
-ourbits_url = "https://ourbits.club/attendance.php"
+ttg_url = "https://totheglory.im/browse.php?c=M"
 baidu_tb_url = "https://tieba.baidu.com/f?kw=%B9%A8%BF%A1"
 baidu_baike_url = "https://baike.baidu.com/item/%E9%BE%9A%E4%BF%8A/19919509"
 
@@ -41,15 +41,16 @@ def get_hai_tang():
         sleep(2)
 
 
-def get_ourbits():
+def get_ttg():
     """
-    Automates the process of logging in to the OurBits website and obtaining the daily bonus.
+    Automates the process of logging in to the ToTheGlory website and obtaining the daily bonus.
     """
     with activate_chrome_driver("Default") as driver:
-        driver.get(hai_tang_url)
-        logging.info(f"Open OurBits: {ourbits_url}")
+        driver.get(ttg_url)
+        logging.info(f"Open ToTheGlory: {ttg_url}")
         sleep(1)
-        logging.info("Click to get the daily bonus from OurBits")
+        driver.find_element(by=By.XPATH, value='//*[@id="signed"]').click()
+        logging.info("Click to get the daily bonus from ToTheGlory")
         sleep(2)
 
 
@@ -81,4 +82,4 @@ def get_baidu_baike():
             driver.find_element(by=By.XPATH,
                                 value='//*[@id="J-lemma-main-wrapper"]/div[1]/div/div/div/div[2]/div[4]/div[1]/div[1]/div[1]').click()
             logging.info(f"{i + 1} click to get the daily bonus from Baidu Baike")
-            sleep(3)
+            sleep(5)
