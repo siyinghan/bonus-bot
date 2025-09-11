@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from util import logging, activate_chrome_driver
 
 hifini_url = "https://www.hifini.com"
-hai_tang_url = "https://www.lvhtebook.com/?act=signinlst"
+zmpt_url = "https://zmpt.cc/torrents.php"
 ttg_url = "https://totheglory.im/browse.php?c=M"
 baidu_tb_url = "https://tieba.baidu.com/f?kw=%B9%A8%BF%A1"
 baidu_baike_url = "https://baike.baidu.com/item/%E9%BE%9A%E4%BF%8A/19919509"
@@ -28,16 +28,17 @@ def get_hifini():
         sleep(2)
 
 
-def get_hai_tang():
+def get_zmpt():
     """
-    Automates the process of logging in to the HaiTang website and obtaining the daily bonus.
+    Automates the process of logging in to the ZmPT website and obtaining the daily bonus.
     """
     with activate_chrome_driver("Default") as driver:
-        driver.get(hai_tang_url)
-        logging.info(f"Open HaiTang: {hai_tang_url}")
+        driver.get(zmpt_url)
+        logging.info(f"Open ToTheGlory: {zmpt_url}")
         sleep(1)
-        driver.find_element(by=By.XPATH, value='//*[@id="mypages"]/center/a[1]').click()
-        logging.info("Click to get the daily bonus from HaiTang")
+        driver.find_element(by=By.XPATH,
+                            value='//*[@id="info_block"]/tbody/tr/td/table/tbody/tr/td[1]/span/a[1]').click()
+        logging.info("Click to get the daily bonus from ZmPT")
         sleep(2)
 
 
