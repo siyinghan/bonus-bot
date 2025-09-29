@@ -63,7 +63,7 @@ def get_baidu_tb():
         driver.get(baidu_tb_url)
         logging.info(f"Open Baidu Tieba: {baidu_tb_url}")
         # click twice to make sure of getting the bonus
-        xpath = '//*[@id="signstar_wrapper"]/a/span[1]'
+        xpath = '//*[@id="signstar_wrapper"]/a'
         driver.find_element(by=By.XPATH, value=xpath).click()
         sleep(1)
         driver.find_element(by=By.XPATH, value=xpath).click()
