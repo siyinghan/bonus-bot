@@ -3,12 +3,18 @@
 All notable changes to the bonus-bot project will be documented in this file. The format is based
 on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.0.8] - 2025-09-29
+## [0.0.9] - 2025-10-05
 
 ### Changed
 
 - Update the element of baidu_tb.
 - Add venv in project.
+
+## [0.0.8] - 2025-09-29
+
+### Changed
+
+- Added BTSCHOOL.
 
 ## [0.0.7] - 2025-09-11
 
