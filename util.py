@@ -2,6 +2,7 @@
 Utility functions.
 """
 import logging
+import os
 import sys
 
 from selenium import webdriver
@@ -20,9 +21,10 @@ def activate_chrome_driver(profile):
     Activate Selenium Chrome driver.
     :return: driver
     """
+    user_data_dir = os.path.expanduser("~/Library/Application Support/Google/Chrome")
     options = webdriver.ChromeOptions()
-    options.add_argument(r"--user-data-dir=~/Library/Application Support/Google/Chrome")
-    options.add_argument(rf"--profile-directory={profile}")
+    options.add_argument(f"--user-data-dir={user_data_dir}")
+    options.add_argument(f"--profile-directory={profile}")
     options.add_argument("--disable-extensions")
     driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
     driver.set_window_size(1400, 1000)

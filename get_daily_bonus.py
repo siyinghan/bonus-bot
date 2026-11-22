@@ -10,10 +10,9 @@ from selenium.webdriver.common.by import By
 from util import logging, activate_chrome_driver
 
 hifini_url = "https://www.hifini.com"
-zmpt_url = "https://zmpt.cc/torrents.php"
 btschool_url = "https://pt.btschool.club/torrents.php"
 ttg_url = "https://totheglory.im/browse.php?c=M"
-baidu_tb_url = "https://tieba.baidu.com/f?kw=%B9%A8%BF%A1"
+baidu_tb_url = "https://tieba.baidu.com/f?ie=utf-8&kw=%E9%BE%9A%E4%BF%8A&fr=search"
 baidu_baike_url = "https://baike.baidu.com/item/%E9%BE%9A%E4%BF%8A/19919509"
 
 
@@ -29,20 +28,6 @@ def get_hifini():
         sleep(2)
 
 
-def get_zmpt():
-    """
-    Automates the process of logging in to the ZmPT website and obtaining the daily bonus.
-    """
-    with activate_chrome_driver("Default") as driver:
-        driver.get(zmpt_url)
-        logging.info(f"Open ZmPT: {zmpt_url}")
-        sleep(1)
-        driver.find_element(by=By.XPATH,
-                            value='//*[@id="info_block"]/tbody/tr/td/table/tbody/tr/td[1]/span/a[1]').click()
-        logging.info("Click to get the daily bonus from ZmPT")
-        sleep(2)
-
-
 def get_btschool():
     """
     Automates the process of logging in to the BTSCHOOL website and obtaining the daily bonus.
@@ -51,7 +36,7 @@ def get_btschool():
         driver.get(btschool_url)
         logging.info(f"Open BTSCHOOL: {btschool_url}")
         sleep(1)
-        driver.find_element(by=By.XPATH, value='//*[@id="outer"]/p[2]/table/tbody/tr/td').click()
+        driver.find_element(by=By.XPATH, value='//*[@id="outer"]/p/table/tbody/tr/td/b/a').click()
         logging.info("Click to get the daily bonus from BTSCHOOL")
         sleep(2)
 
@@ -77,7 +62,7 @@ def get_baidu_tb():
         driver.get(baidu_tb_url)
         logging.info(f"Open Baidu Tieba: {baidu_tb_url}")
         # click twice to make sure of getting the bonus
-        xpath = '//*[@id="signstar_wrapper"]/a'
+        xpath = '/html/body/div[1]/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div[2]/span/span/div/div'
         driver.find_element(by=By.XPATH, value=xpath).click()
         sleep(1)
         driver.find_element(by=By.XPATH, value=xpath).click()

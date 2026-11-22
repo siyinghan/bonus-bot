@@ -3,6 +3,20 @@
 All notable changes to the bonus-bot project will be documented in this file. The format is based
 on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.0.10] - 2026-11-22
+
+### Changed
+
+- Removed ZmPT and disabled Baidu Baike.
+- Updated the BTSCHOOL and Baidu Tieba elements.
+- Updated the Baidu Tieba URL.
+- Ignored `__pycache__` in Git.
+
+### Fixed
+
+- Fixed the Chrome user data directory path so the Chrome profile is loaded from the home directory
+  instead of a `~` folder created inside the project.
+
 ## [0.0.9] - 2025-10-05
 
 ### Changed

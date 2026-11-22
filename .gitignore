@@ -4,5 +4,8 @@
 # IntelliJ IDEA
 .idea
 
+# Python
+__pycache__/
+
 # virtual environment
 venv/
