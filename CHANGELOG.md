@@ -3,6 +3,20 @@
 All notable changes to the bonus-bot project will be documented in this file. The format is based
 on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.0.11] - 2026-11-24
+
+### Changed
+
+- Removed HiFiNi and Baidu Baike.
+- Moved the Chrome automation profile to
+  `~/Library/Application Support/bonus-bot/chrome-profile`, so it no longer conflicts with the
+  daily Chrome profile and Chrome can stay open while the script runs.
+
+### Fixed
+
+- Hid the Selenium automation markers, so Baidu Tieba is no longer redirected to the Baidu security
+  verification page.
+
 ## [0.0.10] - 2026-11-22
 
 ### Changed
